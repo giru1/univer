@@ -1,0 +1,38 @@
+.header {
+    color: var(--text-color);
+    padding: 15px;
+    flex-shrink: 0;
+    margin-bottom: 30px;
+}
+
+.header__logo {
+    display: flex;
+    width: 365px;
+    align-content: center;
+}
+
+.header__logo_img {
+    width: 157px;
+    height: 157px;
+}
+
+.header__logo_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 80%;
+    padding-left: 10px;
+    font-size: 250px;
+}
+
+.header__univer {
+    max-width: 440px;
+}
+
+.header__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
