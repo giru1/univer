@@ -1,36 +1,40 @@
+'use client';
+import Container from "@mui/material/Container";
 import styles from './Header.module.css';
 import logo from './images/logo.png';
 import Image from 'next/image';
 import mainFone from './images/main-fone.png';
+import {Grid} from '@mui/material';
+import React from "react";
 export default function Header() {
     return (
         <>
+        <Container maxWidth="xl" sx={{marginBottom: 4, marginTop: { xs: 3, md: 5, lg: 10 }}}>
             <header className={styles.header}>
-                <div className={styles.container}>
-                    <div className={styles.row}>
-                        <div className={styles.colXl4}>
-                            <div className={styles.headerLeft}>
-                                <div className={styles.headerLogo}>
-                                    <Image src={logo} alt="Логотип" className={styles.headerLogoImg} />
-                                    <h2 className={styles.headerLogoTitle}>
-                                        Оренбургский государственный медицинский университет
-                                    </h2>
-                                </div>
-                                <Image src={mainFone} alt="Университет" className={styles.headerUniver} />
+                <Grid container>
+                    <Grid size={{xs: 12, md: 6, lg: 6, xl: 6}}>
+                        <div className={styles.header__left}>
+                            <div className={styles.header__logo}>
+                                <Image src={logo} alt="Логотип" className={styles.header__logo_img}/>
+                                <h2 className={styles.header__logo_title}>
+                                    Оренбургский государственный медицинский университет
+                                </h2>
                             </div>
+                            <Image src={mainFone} alt="Университет" className={styles.header__univer_img}/>
                         </div>
-                        <div className={styles.colXl8}>
-                            <nav className={styles.navMenu}>
-                                <ul className={styles.navMenuUl}>
-                                    <li className={styles.navMenuItem}>Университет</li>
-                                    <li className={styles.navMenuItem}>Поступающим</li>
-                                    <li className={styles.navMenuItem}>Обучающимся</li>
-                                    <li className={styles.navMenuItem}>Научная деятельность</li>
-                                </ul>
-                            </nav>
+                    </Grid>
+                    <Grid size={{xs: 12, md: 6, lg: 6, xl: 6}}>
+                        <div className={styles.header__rigth}>
+                            <h1 className={styles.header__title_h1}>УПРАВЛЕНИЕ ПО ЦИФРОВОМУ РАЗВИТИЮ</h1>
+                            <p className={styles.header__desc_p}>
+                                Руководитель подразделения: <b>Кирьяков Дмитрий Анатольевич</b>
+                                460014, Оренбургская область, город Оренбург, ул. Советская, 6
+                                <br/>Телефон: <b>+7 (3532) 50-06-06 доб. 644</b><br/>
+                                Электронная почта: <b>d.a.kir@orgma.ru</b>
+                            </p>
                         </div>
-                    </div>
-                </div>
+                    </Grid>
+                </Grid>
             </header>
-        </>)
-}
+        </Container>
+    </>)}
