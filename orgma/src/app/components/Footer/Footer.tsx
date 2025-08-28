@@ -1,6 +1,7 @@
 'use client';
 import Container from "@mui/material/Container";
 import styles from './Footer.module.css';
+import Script from 'next/script'
 
 import {Grid} from '@mui/material';
 import React from "react";
@@ -88,6 +89,6 @@ export default function Footer() {
 
                 </Container>
             </footer>
-            <script src="/WidgetMibase.js"></script>
+            <Script src="./WidgetMibase.js"></Script>
         </>)
 }

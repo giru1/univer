@@ -12,8 +12,8 @@ interface CardProps {
     widgetUrl?: string;    // URL виджета
 }
 
-// Динамический импорт виджета (только на клиенте)
-const WidgetMiBase = dynamic(() => import('./WidgetMiBase'), { ssr: false });
+// // Динамический импорт виджета (только на клиенте)
+// const WidgetMiBase = dynamic(() => import('./WidgetMiBase'), { ssr: false });
 
 export default function Card({ title, description, link, buttonLink, buttonText, widgetUrl }: CardProps) {
     const CardContent = (
@@ -30,7 +30,7 @@ export default function Card({ title, description, link, buttonLink, buttonText,
                         </Button>
                     </a>
                 )}
-                {widgetUrl && <WidgetMiBase url={widgetUrl} />}
+                {widgetUrl && <div id="widgetMiBase" className="widget-mi-base" data-url="defaultSettings.json"></div>}
             </div>
         </div>
     );
