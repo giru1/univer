@@ -89,6 +89,6 @@ export default function Footer() {
 
                 </Container>
             </footer>
-            <Script src="./WidgetMibase.js"></Script>
+            <Script src="WidgetMiBase.js"></Script>
         </>)
 }

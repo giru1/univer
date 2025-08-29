@@ -1,7 +1,7 @@
 'use client';
 import { Grid, Button } from '@mui/material';
 import styles from './Card.module.css';
-import dynamic from 'next/dynamic';
+
 
 interface CardProps {
     title: string;
@@ -24,7 +24,7 @@ export default function Card({ title, description, link, buttonLink, buttonText,
                 <div className={styles.card__desc}>{description}</div>
 
                 {buttonLink && (
-                    <a href={buttonLink} target="_blank" rel="noopener noreferrer">
+                    <a href={buttonLink} className={styles.card__button_link} target="_blank" rel="noopener noreferrer">
                         <Button variant="contained" className={styles.card__button}>
                             {buttonText || "Подробнее"}
                         </Button>

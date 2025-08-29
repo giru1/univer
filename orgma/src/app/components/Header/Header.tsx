@@ -6,9 +6,14 @@ import Image from 'next/image';
 import mainFone from './images/main-fone.png';
 import {Grid} from '@mui/material';
 import React from "react";
-export default function Header() {
+
+interface IHeader {
+    title: string;
+    description?: React.ReactNode;
+}
+
+export default function Header({ title, description }: IHeader) {
     return (
-        <>
         <Container maxWidth="xl" sx={{marginBottom: 4, marginTop: { xs: 3, md: 5, lg: 10 }}}>
             <header className={styles.header}>
                 <Grid container>
@@ -25,16 +30,14 @@ export default function Header() {
                     </Grid>
                     <Grid size={{xs: 12, md: 6, lg: 6, xl: 6}}>
                         <div className={styles.header__rigth}>
-                            <h1 className={styles.header__title_h1}>УПРАВЛЕНИЕ ПО ЦИФРОВОМУ РАЗВИТИЮ</h1>
-                            <p className={styles.header__desc_p}>
-                                Руководитель подразделения: <b>Кирьяков Дмитрий Анатольевич</b>
-                                460014, Оренбургская область, город Оренбург, ул. Советская, 6
-                                <br/>Телефон: <b>+7 (3532) 50-06-06 доб. 644</b><br/>
-                                Электронная почта: <b>d.a.kir@orgma.ru</b>
-                            </p>
+                            <h1 className={styles.header__title_h1}>{title}</h1>
+                            <div className={styles.header__desc}>
+                                {description}
+                            </div>
                         </div>
                     </Grid>
                 </Grid>
             </header>
         </Container>
-    </>)}
+    );
+}

@@ -75,10 +75,15 @@
     }
 }
 
+.card__button_link {
+    display: flex;
+    justify-content: center;
+}
+
 .card__button {
     margin-top: 15px;
-    background-color: #00659b !important;
-    color: white !important;
+    background-color: var(--text-color);
+    color: white;
     font-weight: 600;
     border-radius: 8px;
     padding: 6px 16px;
@@ -87,6 +92,7 @@
 }
 
 .card__button:hover {
-    background-color: #004d75 !important;
+    background-color: var(--text-color-w);
+    color: white;
 }
 

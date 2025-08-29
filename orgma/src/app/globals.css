@@ -1,6 +1,6 @@
 :root {
   --text-color: #00659b;
-  --text-color-w: #89bfea;
+  --text-color-w: #4ea3f7;
   --text-color1: #e2a77c;
   --text-color2: #a87e5f;
   --text-color3: #a5201c;
@@ -21,7 +21,7 @@ body {
 body:before {
   content: '';
   background-image: url(../../public/images/body-fone.png);
-  background-position: 0% 40%;
+  background-position: 0 40%;
   background-size: 30%;
   background-repeat: no-repeat;
   width: 100%;
