@@ -5,126 +5,139 @@ import Header from "@/app/components/Header/Header";
 import Footer from "@/app/components/Footer/Footer";
 import Sidebar from "@/app/components/Sidebar/Sidebar";
 import styles from "@/app/components/Content/Content.module.css";
-import {Grid} from "@mui/material";
 import Card from "@/app/components/Card/Card";
+import {Grid} from "@mui/material";
+
 import Container from "@mui/material/Container";
 import React from "react";
+
 
 
 export default function RootLayout({
 }: Readonly<{}>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-    <Head/>
-    <body>
-    <Sidebar/>
-    <div className="main-container">
-      <Header title={"Системы дистанционного образования"} description={"<div class=\"alert alert-info\">\n" +
-          "            <p>Для входа во все системы используется <strong>Единый идентификатор ВУЗа</strong>. \n" +
-          "            <a href=\"https://it.orgma.ru/eiv/\" class=\"alert-link\" target=\"_blank\">Как получить идентификатор?</a></p>\n" +
-          "            <p>Если у вас возникли проблемы с доступом, обращайтесь по email: <a href=\"mailto:help@orgmu.ru\">623@orgmu.ru</a></p>\n" +
-          "        </div>"}/>
-      {/*{children}*/}
-      {/*<Content/>*/}
-      <Container maxWidth="xl" sx={{marginBottom: 4, marginTop: 4}}>
-        <main className={styles.content}>
-          <Grid container>
-            <Grid size={{xs: 12, md: 6, lg: 6, xl: 6}} order={{xs: 2, md: 1}}>
-              <div className={styles.content__left}>
-                <div className="Content-module__OthSla__content__left">
-                  <div className="contentBlock">
-                    <h2 className="contentBlock__title">Управление по цифровому развитию</h2>
-                    <p className="contentBlock__text">
-                      Управление по цифровому развитию Оренбургского государственного медицинского
-                      университета
-                      осуществляет организацию, сопровождение и развитие цифровой инфраструктуры
-                      вуза. Подразделение
-                      обеспечивает бесперебойное функционирование информационных систем и сервисов,
-                      необходимых
-                      для учебной, научной и административной деятельности.
-                    </p>
+      <html lang="en" suppressHydrationWarning>
+      <Head/>
+      <body>
+      <Sidebar/>
+      <div className="main-container">
+        <Header
+            title={"Системы дистанционного образования"}
+            description={
+              <div className={styles.header__desc_p}>
+                Для входа во все системы используется <b>Единый идентификатор ВУЗа. Как получить
+                идентификатор?</b><br/>
+                Если у вас возникли проблемы с доступом, обращайтесь по email: <b>623@orgmu.ru</b>
+              </div>
+            }
+        />
 
-                    <h3 className="contentBlock__subtitle">Основные задачи Управления:</h3>
-                    <ul className="contentBlock__list">
-                      <li className="contentBlock__listItem">поддержка работоспособности и развитие
-                        корпоративных
-                        информационных систем;
-                      </li>
-                      <li className="contentBlock__listItem">обеспечение функционирования серверного
-                        оборудования,
-                        сетевой инфраструктуры и рабочих мест;
-                      </li>
-                      <li className="contentBlock__listItem">внедрение и сопровождение современных
-                        цифровых сервисов
-                        для студентов и сотрудников;
-                      </li>
-                      <li className="contentBlock__listItem">развитие платформ дистанционного
-                        обучения и
-                        образовательных порталов;
-                      </li>
-                      <li className="contentBlock__listItem">обеспечение информационной безопасности
-                        и защиты
-                        персональных данных.
-                      </li>
-                    </ul>
+        <Container maxWidth="xl" sx={{marginBottom: 4, marginTop: 4}}>
+          <main className={styles.content}>
+            <Grid container>
+              <Grid size={{xs: 12, md: 6, lg: 6, xl: 6}} order={{xs: 2, md: 1}}>
+                <div className={styles.content__left}>
+                  <div className="Content-module__OthSla__content__left">
+                    <div className="contentBlock">
 
-                    <p className="contentBlock__text">
-                      С помощью предоставляемых сервисов сотрудники университета могут подавать и
-                      отслеживать заявки
-                      на
-                      техническое обслуживание, контролировать состояние информационных систем,
-                      получать единый
-                      идентификатор
-                      ВУЗа (ЕИВ), а студенты и преподаватели — пользоваться системой дистанционного
-                      обучения,
-                      образовательным
-                      порталом и другими цифровыми ресурсами.
-                    </p>
+                      <div className={styles.content__left}>
+                        <div className="Content-module__OthSla__content__left">
+                          <div className="contentBlock">
+                            <h2 className="contentBlock__title">Системы дистанционного
+                              образования</h2>
+                            <p className="contentBlock__text">
+                              Системы дистанционного образования Оренбургского
+                              государственного медицинского университета
+                              предоставляют студентам и преподавателям удобный доступ к
+                              образовательным ресурсам и
+                              современным цифровым сервисам. На единой платформе собраны
+                              решения для разных категорий
+                              обучающихся, обеспечивающие эффективное взаимодействие и
+                              поддержку учебного процесса.
+                            </p>
 
-                    <p className="contentBlock__text">
-                      Деятельность Управления направлена на формирование современной цифровой среды
-                      университета,
-                      которая способствует повышению качества образовательного процесса, научной
-                      деятельности
-                      и административного управления.
-                    </p>
+                            <h3 className="contentBlock__subtitle">Основные возможности
+                              систем:</h3>
+                            <ul className="contentBlock__list">
+                              <li className="contentBlock__listItem">
+                                доступ к образовательным курсам и учебным материалам в
+                                онлайн-формате;
+                              </li>
+                              <li className="contentBlock__listItem">
+                                единый вход с использованием <strong>Идентификатора
+                                ВУЗа</strong> для всех платформ;
+                              </li>
+                              <li className="contentBlock__listItem">
+                                поддержка различных категорий обучающихся: студентов,
+                                слушателей подготовительных курсов,
+                                слушателей ИПО и иностранных студентов;
+                              </li>
+                              <li className="contentBlock__listItem">
+                                возможность онлайн-тестирования, контроля знаний и
+                                коммуникации с преподавателями;
+                              </li>
+                              <li className="contentBlock__listItem">
+                                доступность образовательных ресурсов в любое время и с
+                                любого устройства.
+                              </li>
+                            </ul>
+
+                            <p className="contentBlock__text">
+                              Каждая система разработана с учетом особенностей целевой
+                              аудитории: от студентов основных
+                              образовательных программ до слушателей подготовительных курсов и
+                              иностранных студентов.
+                              Такой подход обеспечивает комфортное и продуктивное обучение в
+                              цифровой среде.
+                            </p>
+
+                            <p className="contentBlock__text">
+                              При возникновении проблем с доступом студенты и сотрудники могут
+                              обратиться
+                              в службу технической поддержки по адресу <a
+                                href="mailto:623@orgmu.ru">623@orgmu.ru</a>.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </Grid>
+              <Grid size={{xs: 12, md: 6, lg: 6, xl: 6}} order={{xs: 1, md: 2}}>
+                <div className={styles.content__right}>
+                  <div className="cardIt__wrap">
+                    <Card
+                        description={"Доступ для студентов основных образовательных программ"}
+                        title={"Основная система для студентов"}
+                        buttonLink={"http://1c.orgma.ru/sdo_CUN_001/wc/#/auth"}
+                    />
+                    <Card
+                        buttonLink={"http://1c.orgma.ru/sdo-dovuz/wc/#/auth"}
+                        description={"Доступ для обучающихся на подготовительных курсах"}
+                        title={"Подготовительные курсы"}
+                    />
+                    <Card
+                        buttonLink={"http://1c.orgma.ru/sdo-IPO/wc/#/auth"}
+                        description={"Доступ для обучающихся в ИПО"}
+                        title={"Институт профессионального образования"}
+                    />
+                    <Card
+                        buttonLink={"http://fis.sdo.orgma.ru/"}
+                        description={"Доступ для студентов ФИС"}
+                        title={"Факультет иностранных студентов"}
+                    />
                   </div>
                 </div>
-
-              </div>
+              </Grid>
             </Grid>
-            <Grid size={{xs: 12, md: 6, lg: 6, xl: 6}} order={{xs: 1, md: 2}}>
-              <div className={styles.content__right}>
-                <div className="cardIt__wrap">
-                  <Card
-                      description={"Доступ для студентов основных образовательных программ"}
-                      title={"Основная система для студентов"}
-                      buttonLink={"http://1c.orgma.ru/sdo_CUN_001/wc/#/auth"}
-                  />
-                  <Card
-                      buttonLink={"http://1c.orgma.ru/sdo-dovuz/wc/#/auth"}
-                      description={"Доступ для обучающихся на подготовительных курсах"}
-                      title={"Подготовительные курсы"}
-                  />
-                  <Card
-                      buttonLink={"http://1c.orgma.ru/sdo-IPO/wc/#/auth"}
-                      description={"Доступ для обучающихся в ИПО"}
-                      title={"Институт профессионального образования"}
-                  />
-                  <Card
-                      buttonLink={"http://fis.sdo.orgma.ru/"}
-                      description={"Доступ для студентов ФИС"}
-                      title={"Факультет иностранных студентов"}
-                  />
-                </div>
-              </div>
-            </Grid>
-          </Grid>
-        </main>
-      </Container>
-      <Footer/>
-    </div>
-    </body>
-    </html>
+          </main>
+        </Container>
+        <Footer/>
+      </div>
+      </body>
+      </html>
   );
 }

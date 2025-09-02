@@ -17,13 +17,17 @@ export default function Home() {
       <body>
       <Sidebar/>
       <div className="main-container">
-          <Header title={"УПРАВЛЕНИЕ ПО ЦИФРОВОМУ РАЗВИТИЮ"} description={
-              <div>Руководитель подразделения: <b>Кирьяков Дмитрий Анатольевич</b>
-                  460014, Оренбургская область, город Оренбург, ул. Советская, 6<br/>
-                  Телефон: <b>+7 (3532) 50-06-06 доб. 644</b><br/>
-                  Электронная почта: <b>d.a.kir@orgma.ru</b></div>} />
-          {/*{children}*/}
-          {/*<Content/>*/}
+          <Header
+              title={"Системы дистанционного образования"}
+              description={
+                  <div className={styles.header__desc_p}>
+                      Руководитель подразделения: <b>Кирьяков Дмитрий Анатольевич </b><br/>
+                      460014, Оренбургская область, город Оренбург, ул. Советская, 6
+                      <br/>Телефон: <b>+7 (3532) 50-06-06 доб. 644</b><br/>
+                      Электронная почта: <b>d.a.kir@orgma.ru</b>
+                  </div>
+              }
+          />
           <Container maxWidth="xl" sx={{marginBottom: 4, marginTop: 4}}>
               <main className={styles.content}>
                   <Grid container>

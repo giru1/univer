@@ -57,9 +57,16 @@
     gap: 20px;
 }
 
+@media (max-width: 1200px) {
+    .card__bottom {
+        gap: 5px;
+    }
+}
+
 .card__line {
     height: 1px;
     background-color: white;
+    margin-top: 10px;
 }
 
 .card__desc {
