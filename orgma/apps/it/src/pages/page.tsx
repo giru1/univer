@@ -1,6 +1,6 @@
 
 import styles from "./page.module.css";
-import Head from "@/app/components/Head";
+import Head from "../../../../packages/ui/src/Head";
 import Sidebar from "@/app/components/Sidebar/Sidebar";
 import Header from "@/app/components/Header/Header";
 

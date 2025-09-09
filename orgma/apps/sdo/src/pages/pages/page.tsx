@@ -1,4 +1,4 @@
-import Head from "@/app/components/Head";
+import Head from "../../../../../packages/ui/src/Head";
 import Header from "@/app/components/Header/Header";
 import Footer from "@/app/components/Footer/Footer";
 import Sidebar from "@/app/components/Sidebar/Sidebar";
@@ -6,7 +6,7 @@ import styles from "@/app/components/Content/Content.module.css";
 import {Box, Grid, Link, Typography} from "@mui/material";
 import Container from "@mui/material/Container";
 import React from "react";
-import BlockPay from "@/app/components/BlockPay/BlockPay";
+import BlockPay from "../../../../pay/src/components/BlockPay/BlockPay";
 
 export default function Home() {
   return (

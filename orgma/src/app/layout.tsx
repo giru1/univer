@@ -1,6 +1,6 @@
 
 import "./globals.css";
-import Head from "@/app/components/Head";
+import Head from "../../packages/ui/src/Head";
 import Header from "@/app/components/Header/Header";
 import Footer from "@/app/components/Footer/Footer";
 import Sidebar from "@/app/components/Sidebar/Sidebar";

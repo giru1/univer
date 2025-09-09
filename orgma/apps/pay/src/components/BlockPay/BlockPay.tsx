@@ -414,7 +414,6 @@ export default function PaymentForm() {
         params.append('service', serviceName);
         params.append('amount', (finalAmount ?? 0).toString());
 
-
         if (requiresContract) {
             params.append('contract', contractNumber);
         }
@@ -675,7 +674,6 @@ export default function PaymentForm() {
                                         </Typography>
                                     </Grid>
                                 </Grid>
-
                                 {/* Банковские реквизиты */}
                                 <Typography variant="h6" sx={{ mt: 3 }} gutterBottom>
                                     Банковские реквизиты
@@ -774,7 +772,6 @@ export default function PaymentForm() {
                                         </TableBody>
                                     </Table>
                                 </TableContainer>
-
                                 <Alert severity="info" sx={{ mt: 2 }}>
                                     <Typography variant="body2">
                                         <InfoIcon fontSize="small" sx={{ verticalAlign: 'middle', mr: 0.5 }} />
